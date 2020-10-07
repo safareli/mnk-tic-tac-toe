@@ -1,0 +1,51 @@
+.Board-header {
+  margin: auto;
+  display: flex;
+  height: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  justify-content: space-between;
+  width: calc(min(100vw, 100vh) - 40px);
+}
+.Board-grid {
+  margin: auto;
+  width: calc(min(100vw, 100vh) - 40px);
+  border: 0 solid black;
+  border-left-width: 1px;
+  border-top-width: 1px;
+}
+.Board-row {
+  display: flex;
+}
+.Board-cell:after {
+  content: "";
+  display: block;
+  padding-top: 100%;
+  width: 100%;
+}
+.Board-cell {
+  flex: 1 1 0;
+  border: 0 solid black;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  position: relative;
+}
+
+.Board-cell > svg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.Board--gameOver .Board-cell {
+  pointer-events: none;
+}
+.Board-cell:hover {
+  background: hsl(0, 0%, 90%);
+  cursor: pointer;
+}
+
+.Board-cell--win {
+  color: green;
+}

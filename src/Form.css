@@ -1,0 +1,20 @@
+.Form {
+  max-width: 200px;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.Form-input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.Form-input > input {
+  width: 100%;
+  box-sizing: border-box;
+}
+.Form-inputError {
+  color: red;
+}
